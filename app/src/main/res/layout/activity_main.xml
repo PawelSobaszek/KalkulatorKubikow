@@ -76,8 +76,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12sp"
-            android:text="Metry"/>
+            android:text="Centymetry"/>
         <CheckBox
+            android:id="@+id/checkbox_zapamietaj"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Zapamiętaj"
@@ -93,7 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Oblicz"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/recycler_background"
             android:textColor="@android:color/black"
             android:layout_margin="12dp"
             android:layout_weight="1" />
@@ -101,7 +102,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Skasuj"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/recycler_background"
             android:textColor="@android:color/black"
             android:layout_margin="12dp"
             android:layout_weight="1"/>
@@ -126,12 +127,12 @@
             android:text="Wynik"/>
     </LinearLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </ScrollView>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/backgroundColor"
+            app:spanCount="1"
+            tools:listitem="@layout/tree_list"/>
 
 </LinearLayout>
