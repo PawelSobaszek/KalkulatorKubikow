@@ -30,7 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Średnica"
-                android:inputType="phone"
+                android:inputType="numberPassword"
                 android:outlineAmbientShadowColor="@android:color/black"
                 android:shadowColor="@android:color/black"
                 android:textColorHighlight="@android:color/black"
@@ -68,7 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Długość"
-                android:inputType="phone"
+                android:inputType="numberPassword"
                 android:textColor="@android:color/black"
                 android:textColorHint="@android:color/black"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -91,6 +91,7 @@
         android:padding="16dp"
         android:orientation="horizontal">
         <Button
+            android:id="@+id/btn_oblicz"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Oblicz"
@@ -99,6 +100,7 @@
             android:layout_margin="12dp"
             android:layout_weight="1" />
         <Button
+            android:id="@+id/btn_skasuj"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Skasuj"
@@ -111,12 +113,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
 
         <TextView
+            android:id="@+id/wynik"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1.002m3"
+            android:text="0"
+            android:maxLines="1"
+            android:gravity="center"
             android:textStyle="bold"
             android:textSize="22sp"/>
 
@@ -127,12 +133,46 @@
             android:text="Wynik"/>
     </LinearLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="2dp"
+        android:background="@drawable/recycler_background"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="ID"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Średnica"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Długość"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Wynik" />
+    </LinearLayout>
+
+        <ListView
+            android:id="@+id/tree_list_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="4dp"
             android:background="@color/backgroundColor"
-            app:spanCount="1"
             tools:listitem="@layout/tree_list"/>
 
 </LinearLayout>

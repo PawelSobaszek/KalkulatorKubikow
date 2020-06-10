@@ -13,19 +13,29 @@
         android:background="@drawable/recycler_background"
         android:orientation="horizontal">
         <TextView
-        android:layout_width="wrap_content"
+            android:id="@+id/tree_id"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
         android:text="Test"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/tree_srednica"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
             android:text="Test"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/tree_dlugosc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Test"/>
+        <TextView
+            android:id="@+id/tree_wynik"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
