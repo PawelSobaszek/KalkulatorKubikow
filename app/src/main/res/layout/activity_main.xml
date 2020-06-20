@@ -25,7 +25,6 @@
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             >
-
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/et_srednica"
                 android:layout_width="match_parent"
@@ -33,12 +32,12 @@
                 android:hint="Średnica"
                 android:inputType="numberPassword"
                 android:outlineAmbientShadowColor="@android:color/black"
-                android:outlineSpotShadowColor="@android:color/black"
                 android:shadowColor="@android:color/black"
-                android:textColor="@android:color/black"
                 android:textColorHighlight="@android:color/black"
-                android:textColorHint="@android:color/black"
-                android:textColorLink="@android:color/black" />
+                android:outlineSpotShadowColor="@android:color/black"
+                android:textColorLink="@android:color/black"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"/>
         </com.google.android.material.textfield.TextInputLayout>
         <TextView
             android:layout_width="wrap_content"
@@ -114,7 +113,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
 
         <TextView
             android:id="@+id/wynik"
@@ -123,8 +123,8 @@
             android:text="0"
             android:maxLines="1"
             android:gravity="center"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textSize="22sp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -141,31 +141,38 @@
         android:background="@drawable/recycler_background"
         android:orientation="horizontal">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
             android:text="ID"/>
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="Długość"/>
-        <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
             android:text="Średnica"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Długość"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Wynik" />
     </LinearLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
+        <ListView
+            android:id="@+id/tree_list_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="4dp"
             android:background="@color/backgroundColor"
-            app:spanCount="1"
             tools:listitem="@layout/tree_list"/>
 
 </LinearLayout>
